@@ -11,6 +11,7 @@ public class GameDashboard extends JFrame{
     private JPanel dashboardPanel;
     private JLabel lbAdmin;
     private JButton btnRegister;
+    private JButton btnChess;
 
     public GameDashboard(){
         setTitle("Dashboard");
@@ -63,7 +64,13 @@ public class GameDashboard extends JFrame{
             }
         });
 
-        
+        btnChess.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                Chess chessForm = new Chess(null);
+            }
+        });
     }
 
     private boolean connectToDatabase() {
